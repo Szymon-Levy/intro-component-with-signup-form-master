@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --body-fs: 16px;
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+    --radius: 8px;
+    --input-radius: 6px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--body-fs);
+    line-height: 1.5;
+    color: white;
+    font-weight: 400;
+}
+
+.container{
+    padding: 0 25px;
+    margin-inline: auto;
+    max-width: 1290px;
+}
+
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 70px 0;
+    background-color: var(--Red);
+    background-image: url("images/bg-intro-mobile.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.hero .container{
+    display: grid;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero h1{
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.3;
+    margin-bottom: 23px;
+}
+
+.form-heading{
+    background-color: var(--Blue);
+    border-radius: var(--radius);
+    font-size: 15px;
+    padding: 18px 70px;
+    line-height: 1.7;
+    box-shadow: 0px 8px 1px rgba(0, 0, 0, 0.15);
+    margin-bottom: 25px;
+}
+
+.form-heading span{
+    font-weight: 600;
+}
+
+.join-form{
+    background-color: white;
+    padding: 23px;
+    border-radius: var(--radius);
+    box-shadow: 0px 8px 1px rgba(0, 0, 0, 0.15);
+}
+
+.join-form .input-wrapper {
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.join-form input{
+    border-radius: var(--input-radius);
+    width: 100%;
+    border: 1px solid var(--Grayish-Blue);
+    height: 56px;
+    line-height: 56px;
+    padding: 0 18px;
+    font-family: inherit;
+    color: var(--Dark-Blue);
+    transition: border .1s;
+    outline: none;
+    font-weight: 600;
+}
+
+.join-form input:focus{
+    border: 1px solid var(--Blue);
+}
+
+.join-form input::placeholder{
+    font-weight: 600;
+    color: #66656a;
+    font-size: 14px;
+}
+
+.join-form input.invalid{
+    border: 2px solid var(--Red);
+    color: var(--Red);
+}
+
+.join-form .input-wrapper .error-icon {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+}
+
+.join-form button{
+    background-color: var(--Green);
+    border: 0;
+    color: white;
+    border-radius: var(--input-radius);
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: inherit;
+    font-weight: 500;
+    padding: 15px 10px;
+    box-shadow: 0px 5px 1px hsla(154, 59%, 40%, 0.8);;
+    transition: background-color .4s;
+    cursor: pointer;
+}
+
+.join-form button:hover{
+    background-color: hsl(154, 59%, 65%);
+}
+
+.join-form .info{
+    color: var(--Grayish-Blue);
+    font-size: 11px;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.join-form .info a {
+    color: var(--Red);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+/*--------Devices--------*/
+
+@media(min-width: 768px){
+    .hero{
+        background-image: url("images/bg-intro-desktop.png");
+    }
+}
+
+
+
+@media(min-width: 992px){
+    body{
+        line-height: 1.6;
+    }
+    .container{
+        padding: 0 60px;
+    }
+    .hero .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .text-col{
+        text-align: left;
+    }
+    .hero h1 {
+        font-size: 48px;
+        line-height: 1.2;
+        margin-bottom: 32px;
+    }
+    .join-form {
+        padding: 40px;
+    }
+    .join-form input {
+        padding: 0 30px;
+    }
+}
+
+
+
+@media(min-width: 1200px){
+    .container{
+        padding: 0 90px;
+    }
+}
