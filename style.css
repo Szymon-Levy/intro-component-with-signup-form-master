@@ -109,11 +109,12 @@ body{
 .join-form input.invalid{
     border: 2px solid var(--Red);
     color: var(--Red);
+    margin-bottom: 15px;
 }
 
 .join-form .input-wrapper .error-icon {
     position: absolute;
-    top: 50%;
+    top: calc(50% - 7.5px);
     right: 30px;
     transform: translateY(-50%);
 }
@@ -150,6 +151,15 @@ body{
     color: var(--Red);
     text-decoration: none;
     font-weight: 700;
+}
+
+.error-message{
+    font-size: 11px;
+    color: var(--Red);
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    font-style: italic;
 }
 
 
